@@ -1,0 +1,46 @@
+# Learn more about .gitignore:
+# https://www.atlassian.com/git/tutorials/saving-changes/gitignore
+
+# Node / Next.js
+node_modules/
+.next/
+dist/
+next.config.js
+
+# Environment files
+*.env
+
+# Logs
+*.log
+
+# Java / JVM
+*.class
+*.jar
+*.war
+target/
+
+# Python
+*.py[cod]
+
+# Test reports
+TEST*.xml
+
+# IDEs
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Archives & large files
+*.zip
+*.mp4
+*.tiff
+*.avi
+*.flv
+*.mov
+*.wmv
+
+# Applications
+*.app
+*.exe
