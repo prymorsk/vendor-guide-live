@@ -18,9 +18,9 @@ const myFont = localFont({
 export const metadata = {
   title: { template: '%s', default: 'Vendor Guide' },
   robots: {
-    index: false,
-    follow: false,
-    nocache: false,
+    index: true,
+    follow: true,
+    nocache: true,
   },
 };
 
