@@ -51,7 +51,7 @@ export default function RootLayout({ children, ...props }) {
         />
 
         {/* open on Production */}
-        {/* <GTM /> */}
+        <GTM /> 
       </head>
 
       <body >
