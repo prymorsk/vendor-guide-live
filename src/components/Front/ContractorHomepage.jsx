@@ -11,7 +11,7 @@ const ContractorHomepage = ({ contractors }) => {
     <>
       {Array.isArray(contractorsData) && contractorsData.length > 0 && (
         <div className="w-full md:w-[40%]">
-          <div className="contrtitle">Featured partner spotlight</div>
+          <div className="contrtitle">Featured Partner Spotlight</div>
 
           <div className="fourprofile-listing">
             <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-8">
