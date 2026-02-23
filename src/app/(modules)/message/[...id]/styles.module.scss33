@@ -1,5 +1,4 @@
-@use "sass:math";
-@use "sass:color";
+
 
 $green: #c2c2c2;
 $blue: #b13634;
@@ -9,6 +8,7 @@ $lite:  #b13634;
 $size: 20px;
 $brand: #FF3D00;
 
+
 .container {
   margin: 0 auto;
   width: 750px;
@@ -16,13 +16,13 @@ $brand: #FF3D00;
 }
 
 .people-list {
-  width: 260px;
+  width:260px;
   float: left;
-
+  
   .search {
     padding: 20px;
   }
-
+  
   input {
     border-radius: 3px;
     border: none;
@@ -32,70 +32,78 @@ $brand: #FF3D00;
     width: 90%;
     font-size: 14px;
   }
-
+  
   .fa-search {
     position: relative;
     left: -25px;
   }
-
+  
   ul {
     padding: 20px;
     height: 770px;
-
+ 
+    
+    
+    
     li {
       padding-bottom: 20px;
     }
   }
-
+  
   img {
     float: left;
   }
-
+  
   .about {
     float: left;
     margin-top: 8px;
+  }
+  
+  .about {
     padding-left: 8px;
   }
-
+  
   .status {
     color: $gray;
   }
+  
 }
 
 .chat {
   width: 100%;
-  float: left;
+  float:left;
   background: #FFFFFF;
+  
   color: #434651;
-
+  
   .chat-header {
     padding: 20px;
     border-bottom: 2px solid #f6f7f8;
-
+    
     img {
       float: left;
     }
-
+    
     .chat-about {
       width: 100%;
       float: left;
       padding-left: 10px;
       margin-top: 6px;
     }
-
+    
     .chat-with {
       float: left;
       font-weight: bold;
       font-size: 16px;
     }
-
+    
     .chat-num-messages {
       width: 100%;
       float: left;
       color: $gray;
       padding-left: 10px;
     }
-
+    
     .fa-star {
       float: right;
       color: #D8DADF;
@@ -103,23 +111,23 @@ $brand: #FF3D00;
       margin-top: 12px;
     }
   }
-
+  
   .chat-history {
     padding: 30px 30px 20px;
     border-bottom: 2px solid white;
     overflow-y: scroll;
     height: 575px;
-
+    
     .message-data {
       margin-bottom: 15px;
     }
-
+    
     .message-data-time {
-      color: color.adjust($gray, $lightness: 8%);
+      color: lighten($gray, 8%);
       padding-left: 6px;
     }
-
-    .message {
+    
+    .message {      
       color: white;
       padding: 18px 20px;
       line-height: 26px;
@@ -128,7 +136,7 @@ $brand: #FF3D00;
       margin-bottom: 30px;
       width: 90%;
       position: relative;
-
+      
       &:after {
         bottom: 100%;
         left: 7%;
@@ -143,22 +151,25 @@ $brand: #FF3D00;
         margin-left: -10px;
       }
     }
-
+    
     .my-message {
       background: $green;
     }
-
+    
     .other-message {
       background: $blue;
-
+      
       &:after {
         border-bottom-color: $blue;
         left: 93%;
       }
     }
+    
   }
-
+  
   .chat-message {
+
+    
     textarea {
       width: 100%;
       border: none;
@@ -167,28 +178,28 @@ $brand: #FF3D00;
       margin-bottom: 10px;
       border-radius: 5px;
       resize: none;
+      
     }
-
-    .fa-file-o,
-    .fa-file-image-o {
+    
+    .fa-file-o, .fa-file-image-o {
       font-size: 16px;
       color: gray;
       cursor: pointer;
+      
     }
+    
   }
 }
 
-.online,
-.offline,
-.me {
-  margin-right: 3px;
-  font-size: 10px;
-}
-
+.online, .offline, .me {
+    margin-right: 3px;
+    font-size: 10px;
+  }
+  
 .online {
   color: $green;
 }
-
+  
 .offline {
   color: $orange;
 }
@@ -210,47 +221,38 @@ $brand: #FF3D00;
 }
 
 .clearfix:after {
-  visibility: hidden;
-  display: block;
-  font-size: 0;
-  content: " ";
-  clear: both;
-  height: 0;
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
 }
 
-/* Loader */
 .loader-40 {
-  width: math.div($size, 3);
-  height: math.div($size, 3);
+  width : $size/3;
+  height: $size/3;
   border-radius: 50%;
   display: inline-block;
   position: relative;
   background: $lite;
-  box-shadow:
-    math.div(-$size, 2) 0 $lite,
-    math.div($size, 2) 0 $lite;
+  box-shadow:  -$size/2 0 $lite, $size/2 0 $lite;
   animation: shadowPulse 2s linear infinite;
 }
 
 @keyframes shadowPulse {
-  33% {
+  33% {   
     background: $lite;
-    box-shadow:
-      math.div(-$size, 2) 0 $brand,
-      math.div($size, 2) 0 $lite;
-  }
-
-  66% {
+    box-shadow:  -$size/2 0 $brand, $size/2 0 $lite;
+  } 
+  
+  66% {   
     background: $brand;
-    box-shadow:
-      math.div(-$size, 2) 0 $lite,
-      math.div($size, 2) 0 $lite;
-  }
-
-  100% {
+    box-shadow:  -$size/2 0 $lite, $size/2 0 $lite;
+  }  
+  100% {   
     background: $lite;
-    box-shadow:
-      math.div(-$size, 2) 0 $lite,
-      math.div($size, 2) 0 $brand;
+    box-shadow:  -$size/2 0 $lite, $size/2 0 $brand;
   }
+  
 }
