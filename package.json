@@ -22,7 +22,7 @@
     "@nextui-org/react": "^2.1.13",
     "@stripe/react-stripe-js": "^2.6.0",
     "@stripe/stripe-js": "^2.4.0",
-    "axios": "^1.6.8",
+    "axios": "^1.13.5",
     "bootstrap": "^5.3.3",
     "cookies-next": "^4.1.1",
     "flipping-pages": "^3.1.0",
